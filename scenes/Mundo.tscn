@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://scenes/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/elements/building_1.png" type="Texture" id=2]
@@ -10,24 +10,10 @@
 [ext_resource path="res://assets/elements/tree_2.png" type="Texture" id=8]
 [ext_resource path="res://assets/elements/decor_17.png" type="Texture" id=9]
 [ext_resource path="res://assets/backgrounds/background-5.png" type="Texture" id=10]
+[ext_resource path="res://scenes/pass.tscn" type="PackedScene" id=11]
+[ext_resource path="res://assets/elements/stones_7.png" type="Texture" id=12]
+[ext_resource path="res://assets/elements/house2.png" type="Texture" id=13]
 [ext_resource path="res://addons/dialogic/Nodes/Dialog.tscn" type="PackedScene" id=15]
-[ext_resource path="res://assets/elements/portal-4.png" type="Texture" id=16]
-[ext_resource path="res://assets/elements/portal-2.png" type="Texture" id=17]
-[ext_resource path="res://assets/elements/portal-1.png" type="Texture" id=18]
-[ext_resource path="res://assets/elements/portal-3.png" type="Texture" id=19]
-[ext_resource path="res://scenes/pass.gd" type="Script" id=20]
-
-[sub_resource type="SpriteFrames" id=2]
-animations = [ {
-"frames": [ ExtResource( 18 ), ExtResource( 17 ), ExtResource( 19 ), ExtResource( 16 ) ],
-"loop": true,
-"name": "portalAnimation",
-"speed": 4.0
-} ]
-
-[sub_resource type="CapsuleShape2D" id=3]
-radius = 17.6626
-height = 57.2395
 
 [node name="Mundo" type="Node"]
 
@@ -63,6 +49,15 @@ position = Vector2( 281.133, 433.073 )
 scale = Vector2( 0.543964, 0.54157 )
 texture = ExtResource( 9 )
 
+[node name="house1" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 837.357, 323.269 )
+scale = Vector2( 0.563188, 0.533313 )
+texture = ExtResource( 13 )
+
+[node name="stone1" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 434.559, 421.018 )
+texture = ExtResource( 12 )
+
 [node name="player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 134.115, 418.543 )
 
@@ -85,19 +80,6 @@ tile_data = PoolIntArray( 589824, 0, 0, 589826, 1, 0, 589828, 1, 0, 589830, 1, 0
 tile_set = ExtResource( 6 )
 format = 1
 
-[node name="pass" type="Area2D" parent="."]
-z_index = -1
-script = ExtResource( 20 )
-
-[node name="animatedPortal" type="AnimatedSprite" parent="pass"]
-visible = false
-position = Vector2( 1757.58, 376.379 )
-frames = SubResource( 2 )
-animation = "portalAnimation"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="pass"]
-position = Vector2( 1757.04, 380.206 )
-shape = SubResource( 3 )
+[node name="pass" parent="." instance=ExtResource( 11 )]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-[connection signal="body_entered" from="pass" to="pass" method="_on_pass_body_entered"]
