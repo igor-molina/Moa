@@ -1,0 +1,156 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://assets/models/menu.png" type="Texture" id=1]
+[ext_resource path="res://scenes/Dialogo.gd" type="Script" id=2]
+[ext_resource path="res://assets/fonts/FreeUniversal-Regular.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 24
+font_data = ExtResource( 3 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "TextDisplay"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[sub_resource type="DynamicFont" id=2]
+size = 22
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 22
+font_data = ExtResource( 3 )
+
+[sub_resource type="Animation" id=5]
+resource_name = "PressSpaceBar"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.1, 1.1 ), Vector2( 1, 1 ) ]
+}
+
+[node name="Dialogo" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="box" type="Control" parent="."]
+margin_right = 1017.0
+margin_bottom = 605.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="big_patch" type="NinePatchRect" parent="box"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -360.0
+margin_top = -128.0
+margin_right = 360.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 720, 256 )
+texture = ExtResource( 1 )
+patch_margin_left = 16
+patch_margin_top = 48
+patch_margin_right = 16
+patch_margin_bottom = 18
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="marginContainer" type="MarginContainer" parent="box/big_patch"]
+margin_left = 35.0
+margin_top = 53.0
+margin_right = 708.0
+margin_bottom = 154.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="body_label" type="Label" parent="box/big_patch/marginContainer"]
+margin_right = 673.0
+margin_bottom = 101.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 1 )
+text = "Agora que o governo descobriu tudo vamos precisar sair da 
+ilha. Como você iniciará essa viagem?"
+valign = 1
+
+[node name="body_animation" type="AnimationPlayer" parent="box/big_patch/marginContainer/body_label"]
+anims/TextDisplay = SubResource( 3 )
+
+[node name="speaker" type="NinePatchRect" parent="box/big_patch"]
+margin_left = -21.8633
+margin_top = -20.1815
+margin_right = 158.137
+margin_bottom = 27.8185
+rect_min_size = Vector2( 180, 48 )
+texture = ExtResource( 1 )
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="speaker_label" type="Label" parent="box/big_patch/speaker"]
+margin_right = 178.0
+margin_bottom = 46.0
+custom_fonts/font = SubResource( 2 )
+text = "Consciência"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="skip" type="NinePatchRect" parent="box/big_patch"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -238.451
+margin_top = -28.2275
+margin_right = 17.5486
+margin_bottom = 19.7725
+rect_min_size = Vector2( 256, 48 )
+texture = ExtResource( 1 )
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="skip_label" type="Label" parent="box/big_patch/skip"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 4 )
+text = "Pressione espaço"
+align = 1
+valign = 1
+
+[node name="skip_animation" type="AnimationPlayer" parent="box/big_patch/skip"]
+autoplay = "PressSpaceBar"
+anims/PressSpaceBar = SubResource( 5 )
