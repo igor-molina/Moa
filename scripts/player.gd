@@ -5,6 +5,14 @@ const SPEED = 600
 const UP = Vector2(0, -1)
 var motion = Vector2() #função que recebe índices x e y como parâmetro. Usado 
 #para objetos 2D
+const DialogNode = preload("res://addons/dialogic/Nodes/dialog_node.gd") # Relative path
+onready var dialog_node = DialogNode.new()
+
+func _ready():
+	dialog_node.connect("dialogic_signal", self, 'signal_from_dialogic')
+
+func signal_from_dialogic(value):
+	print(value + "Aqui foi ativado")
 	
 func _physics_process(delta): #processamento contínuo da física do objeto 
 	#nesse caso jogador) com o delta(leitura de fps) como parâmetro

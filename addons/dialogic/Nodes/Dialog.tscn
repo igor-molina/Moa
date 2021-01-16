@@ -27,6 +27,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 6 )
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 timeline = "timeline-1610650789"
@@ -51,14 +52,14 @@ __meta__ = {
 }
 
 [node name="TextBubble" type="Control" parent="."]
-anchor_left = 0.503
-anchor_top = 0.31
-anchor_right = 0.503
-anchor_bottom = 0.31
-margin_left = -455.402
-margin_top = -83.6327
-margin_right = 454.598
-margin_bottom = 83.3677
+anchor_left = 0.387
+anchor_top = 0.227
+anchor_right = 0.387
+anchor_bottom = 0.227
+margin_left = -341.245
+margin_top = -31.2854
+margin_right = 430.755
+margin_bottom = 30.7146
 __meta__ = {
 "_edit_group_": true,
 "_edit_use_anchors_": false
@@ -97,9 +98,9 @@ custom_colors/font_color_shadow = Color( 1, 1, 1, 0 )
 custom_constants/shadow_offset_x = 2
 custom_constants/shadow_offset_y = 2
 bbcode_enabled = true
-bbcode_text = "Placeholder text for testing and formatting."
+bbcode_text = "Agora que o governo já sabe de tudo, você precisa sair da ilha imediatamente."
 meta_underlined = false
-text = "Placeholder text for testing and formatting."
+text = "Agora que o governo já sabe de tudo, você precisa sair da ilha imediatamente."
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -107,7 +108,6 @@ __meta__ = {
 [node name="Tween" type="Tween" parent="TextBubble"]
 
 [node name="NextIndicator" type="TextureRect" parent="TextBubble"]
-visible = false
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
@@ -139,8 +139,6 @@ custom_constants/shadow_offset_x = 2
 custom_constants/shadow_offset_y = 2
 custom_constants/shadow_as_outline = 10
 bbcode_enabled = true
-bbcode_text = "Name Here"
-text = "Name Here"
 scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
@@ -148,11 +146,13 @@ __meta__ = {
 
 [node name="Options" type="VBoxContainer" parent="."]
 anchor_left = 0.5
+anchor_top = 0.262
 anchor_right = 0.5
-margin_left = -22.2449
-margin_top = -18.5748
-margin_right = 17.7551
-margin_bottom = 21.425
+anchor_bottom = 0.262
+margin_left = -26.4828
+margin_top = -23.2121
+margin_right = 13.5173
+margin_bottom = 16.7877
 grow_horizontal = 2
 grow_vertical = 2
 __meta__ = {
