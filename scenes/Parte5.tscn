@@ -95,7 +95,7 @@ scale = Vector2( 0.492736, 0.470063 )
 texture = ExtResource( 9 )
 
 [node name="decor1" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 337.664, 463.283 )
+position = Vector2( 381.664, 462.283 )
 scale = Vector2( 0.376036, 0.341188 )
 texture = ExtResource( 6 )
 
@@ -164,8 +164,8 @@ scale = Vector2( 0.53144, 0.422354 )
 texture = ExtResource( 10 )
 
 [node name="human1" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 459.964, 446.568 )
-scale = Vector2( 1.51205, 1.46043 )
+position = Vector2( 456.964, 452.568 )
+scale = Vector2( 1.25118, 1.17472 )
 texture = ExtResource( 7 )
 
 [node name="roadFloor" type="TileMap" parent="."]
