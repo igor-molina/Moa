@@ -164,8 +164,8 @@ scale = Vector2( 0.53144, 0.422354 )
 texture = ExtResource( 10 )
 
 [node name="human1" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 456.964, 452.568 )
-scale = Vector2( 1.25118, 1.17472 )
+position = Vector2( 457.229, 454.422 )
+scale = Vector2( 1.27422, 1.26301 )
 texture = ExtResource( 7 )
 
 [node name="roadFloor" type="TileMap" parent="."]
