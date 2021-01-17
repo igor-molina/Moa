@@ -24,7 +24,7 @@
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 
 [node name="backgroundImage" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 0, -301.227 )
+position = Vector2( -3.36359, -297.863 )
 scale = Vector2( 1.85964, 1.24136 )
 texture = ExtResource( 10 )
 centered = false

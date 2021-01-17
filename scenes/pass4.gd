@@ -4,5 +4,5 @@ extends Area2D
 func _ready():
 	pass # Replace with function body.
 
-func _on_pass_body_entered(body):
-	get_tree().change_scene("res://scenes/Parte2.tscn")
+func _on_pass4_body_entered(body):
+	print("Erro aqui")
