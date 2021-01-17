@@ -9,4 +9,4 @@ func _ready():
 
 
 func _on_pass5_body_entered(body):
-	pass # Replace with function body.
+	get_tree().change_scene("res://scenes/Parte6.tscn")

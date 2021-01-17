@@ -13,4 +13,4 @@ func _ready():
 
 
 func _on_transition4_body_entered(body):
-	get_tree().change_scene("res://scenes/Parte5.tscn")
+	get_tree().change_scene("res://scenes/Parte7.tscn")

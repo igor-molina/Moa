@@ -1,0 +1,76 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://tileset/floor.tres" type="TileSet" id=1]
+[ext_resource path="res://assets/backgrounds/background-5.png" type="Texture" id=2]
+[ext_resource path="res://scenes/pass7.gd" type="Script" id=3]
+[ext_resource path="res://scenes/player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/elements/sanctuary1.png" type="Texture" id=5]
+[ext_resource path="res://assets/elements/friend.png" type="Texture" id=6]
+[ext_resource path="res://assets/elements/house4.png" type="Texture" id=7]
+[ext_resource path="res://addons/dialogic/Nodes/Dialog.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets/elements/house8.png" type="Texture" id=9]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 37.2096
+
+[node name="Parte7" type="Node2D"]
+
+[node name="DialogNode" parent="." instance=ExtResource( 8 )]
+margin_left = 471.434
+margin_top = 222.247
+margin_right = 471.434
+margin_bottom = 222.247
+timeline = "timeline-1610901663"
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="background" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 857.089, 204.901 )
+scale = Vector2( 1.87009, 1.21987 )
+texture = ExtResource( 2 )
+
+[node name="house1" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 963.073, 338.983 )
+scale = Vector2( 0.670556, 0.689437 )
+texture = ExtResource( 5 )
+
+[node name="house2" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 248.094, 363.981 )
+scale = Vector2( 0.788336, 0.657655 )
+texture = ExtResource( 7 )
+
+[node name="house3" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 557.777, 369.321 )
+scale = Vector2( 0.788336, 0.657655 )
+texture = ExtResource( 7 )
+
+[node name="friend" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 376.344, 448.292 )
+scale = Vector2( 1.85041, 1.99624 )
+texture = ExtResource( 6 )
+
+[node name="house4" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 1365.72, 304.559 )
+scale = Vector2( 0.717972, 0.630363 )
+texture = ExtResource( 9 )
+
+[node name="player" parent="." instance=ExtResource( 4 )]
+position = Vector2( 56.5725, 452.611 )
+
+[node name="pass7" type="Area2D" parent="."]
+position = Vector2( 25.3983, -85.7197 )
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pass7"]
+position = Vector2( 1712.72, 519.418 )
+shape = SubResource( 1 )
+
+[node name="upFloor" type="TileMap" parent="."]
+position = Vector2( 0, -92.0692 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 1179648, 0, 0, 1179652, 1, 0, 1179656, 1, 0, 1179660, 1, 0, 1179664, 1, 0, 1179668, 1, 0, 1179672, 1, 0, 1179676, 1, 0, 1179680, 1, 0, 1179684, 1, 0, 1179688, 1, 0, 1179692, 1, 0, 1179696, 1, 0, 1179700, 2, 0 )
+[connection signal="body_entered" from="pass7" to="pass7" method="_on_pass7_body_entered"]

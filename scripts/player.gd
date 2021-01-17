@@ -12,10 +12,7 @@ func _ready():
 	dialog_node.connect("dialogic_signal", self, 'signal_from_dialogic')
 
 func signal_from_dialogic(value):
-	if value == "sellerSim":
-		print("sim")
-	if value == "sellerNao":
-		print("sellerNao")
+	print(value)
 	
 func _physics_process(delta): #processamento contínuo da física do objeto 
 	#nesse caso jogador) com o delta(leitura de fps) como parâmetro
