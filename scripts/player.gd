@@ -5,6 +5,7 @@ const SPEED = 600
 const UP = Vector2(0, -1)
 var motion = Vector2() #função que recebe índices x e y como parâmetro. Usado 
 #para objetos 2D
+
 const DialogNode = preload("res://addons/dialogic/Nodes/dialog_node.gd") # Relative path
 onready var dialog_node = DialogNode.new()
 

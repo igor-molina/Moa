@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://scenes/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/elements/building_1.png" type="Texture" id=2]
@@ -13,7 +13,9 @@
 [ext_resource path="res://scenes/pass.tscn" type="PackedScene" id=11]
 [ext_resource path="res://assets/elements/stones_7.png" type="Texture" id=12]
 [ext_resource path="res://assets/elements/house2.png" type="Texture" id=13]
+[ext_resource path="res://assets/elements/greenery_4.png" type="Texture" id=14]
 [ext_resource path="res://addons/dialogic/Nodes/Dialog.tscn" type="PackedScene" id=15]
+[ext_resource path="res://assets/elements/house9.png" type="Texture" id=16]
 
 [node name="Mundo" type="Node"]
 
@@ -30,7 +32,7 @@ texture = ExtResource( 10 )
 centered = false
 
 [node name="tree1" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 1401.68, 303.486 )
+position = Vector2( 1218.57, 299.711 )
 scale = Vector2( 0.892854, 0.641555 )
 texture = ExtResource( 7 )
 
@@ -49,14 +51,70 @@ position = Vector2( 281.133, 433.073 )
 scale = Vector2( 0.543964, 0.54157 )
 texture = ExtResource( 9 )
 
+[node name="barrel2" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 323.559, 433.073 )
+scale = Vector2( 0.543964, 0.54157 )
+texture = ExtResource( 9 )
+
+[node name="barrel3" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 364.572, 433.073 )
+scale = Vector2( 0.543964, 0.54157 )
+texture = ExtResource( 9 )
+
 [node name="house1" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2( 837.357, 323.269 )
 scale = Vector2( 0.563188, 0.533313 )
 texture = ExtResource( 13 )
 
+[node name="house2" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 1550.93, 330.82 )
+scale = Vector2( 0.571037, 0.540602 )
+texture = ExtResource( 16 )
+flip_h = true
+
 [node name="stone1" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2( 434.559, 421.018 )
 texture = ExtResource( 12 )
+
+[node name="decor1" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 597.766, 422.712 )
+scale = Vector2( 1.25647, 1.01741 )
+texture = ExtResource( 14 )
+
+[node name="decor2" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 1294.48, 431.702 )
+scale = Vector2( 1.0135, 0.754191 )
+texture = ExtResource( 14 )
+
+[node name="decor3" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 1213.57, 437.695 )
+scale = Vector2( 1.0135, 0.754191 )
+texture = ExtResource( 14 )
+flip_h = true
+
+[node name="decor4" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 1132.66, 433.2 )
+scale = Vector2( 1.0135, 0.754191 )
+texture = ExtResource( 14 )
+flip_h = true
+
+[node name="decor5" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 1053.25, 434.698 )
+scale = Vector2( 1.0135, 0.754191 )
+texture = ExtResource( 14 )
+flip_h = true
+
+[node name="decor6" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 1461.01, 430.923 )
+scale = Vector2( 1.0135, 0.754191 )
+texture = ExtResource( 14 )
+flip_h = true
+
+[node name="decor7" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 1679.98, 436.586 )
+scale = Vector2( 1.0135, 0.754191 )
+texture = ExtResource( 14 )
+flip_h = true
 
 [node name="player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 134.115, 418.543 )
@@ -81,5 +139,3 @@ tile_set = ExtResource( 6 )
 format = 1
 
 [node name="pass" parent="." instance=ExtResource( 11 )]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]

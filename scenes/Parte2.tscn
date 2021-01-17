@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://assets/backgrounds/background-5.png" type="Texture" id=1]
 [ext_resource path="res://scenes/player.tscn" type="PackedScene" id=2]
@@ -12,6 +12,12 @@
 [ext_resource path="res://addons/dialogic/Nodes/Dialog.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scenes/pass2.gd" type="Script" id=11]
 [ext_resource path="res://assets/elements/portal-4.png" type="Texture" id=12]
+[ext_resource path="res://assets/elements/house3.png" type="Texture" id=13]
+[ext_resource path="res://assets/elements/decor_5.png" type="Texture" id=14]
+[ext_resource path="res://assets/elements/decor_16.png" type="Texture" id=15]
+[ext_resource path="res://assets/elements/greenery_1.png" type="Texture" id=16]
+[ext_resource path="res://assets/elements/decor_13.png" type="Texture" id=17]
+[ext_resource path="res://assets/elements/wood1.png" type="Texture" id=18]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 12.3351
@@ -55,10 +61,15 @@ position = Vector2( 215.174, 304.919 )
 scale = Vector2( 0.548278, 0.536506 )
 texture = ExtResource( 4 )
 
-[node name="friendsHouse" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+[node name="house1" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2( 1214.75, 306.97 )
 scale = Vector2( 0.65088, 0.596012 )
 texture = ExtResource( 9 )
+
+[node name="house2" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 1550.11, 280.807 )
+scale = Vector2( 0.65088, 0.596012 )
+texture = ExtResource( 13 )
 
 [node name="tree1" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2( 711.146, 216.436 )
@@ -67,6 +78,11 @@ texture = ExtResource( 7 )
 [node name="tree2" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2( 1018.55, 287.788 )
 scale = Vector2( 0.827433, 0.772233 )
+texture = ExtResource( 7 )
+
+[node name="tree3" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 462.166, 337.791 )
+scale = Vector2( 0.542001, 0.564672 )
 texture = ExtResource( 7 )
 
 [node name="greenery1" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
@@ -83,6 +99,31 @@ texture = ExtResource( 8 )
 position = Vector2( 564.217, 423.018 )
 scale = Vector2( 0.606123, 0.572137 )
 texture = ExtResource( 8 )
+
+[node name="decor1" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 1545.97, 376.979 )
+scale = Vector2( 0.551243, 0.603598 )
+texture = ExtResource( 14 )
+
+[node name="decor2" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 1590.8, 368.956 )
+scale = Vector2( 0.400624, 0.338537 )
+texture = ExtResource( 15 )
+
+[node name="decor3" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 510.577, 441.183 )
+scale = Vector2( 0.478393, 0.469882 )
+texture = ExtResource( 17 )
+
+[node name="decor4" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 1052.96, 426.2 )
+scale = Vector2( 0.478393, 0.469882 )
+texture = ExtResource( 16 )
+
+[node name="decor5" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 905.351, 416.761 )
+scale = Vector2( 0.68169, 0.712859 )
+texture = ExtResource( 18 )
 
 [node name="sellerSignal" type="Area2D" parent="."]
 position = Vector2( -68.5985, -0.181458 )
